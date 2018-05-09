@@ -16,16 +16,16 @@ xmlns="http://www.w3.org/TR/REC-html40">
   <o:Template>Normal</o:Template>
   <o:LastAuthor>bioinformatics</o:LastAuthor>
   <o:Revision>2</o:Revision>
-  <o:TotalTime>2</o:TotalTime>
-  <o:Created>2018-05-08T13:13:00Z</o:Created>
-  <o:LastSaved>2018-05-08T13:13:00Z</o:LastSaved>
-  <o:Pages>2</o:Pages>
-  <o:Words>563</o:Words>
-  <o:Characters>3210</o:Characters>
+  <o:TotalTime>286</o:TotalTime>
+  <o:Created>2018-05-09T17:45:00Z</o:Created>
+  <o:LastSaved>2018-05-09T17:45:00Z</o:LastSaved>
+  <o:Pages>5</o:Pages>
+  <o:Words>798</o:Words>
+  <o:Characters>4550</o:Characters>
   <o:Company>MIT</o:Company>
-  <o:Lines>26</o:Lines>
-  <o:Paragraphs>7</o:Paragraphs>
-  <o:CharactersWithSpaces>3766</o:CharactersWithSpaces>
+  <o:Lines>37</o:Lines>
+  <o:Paragraphs>10</o:Paragraphs>
+  <o:CharactersWithSpaces>5338</o:CharactersWithSpaces>
   <o:Version>14.00</o:Version>
  </o:DocumentProperties>
  <o:OfficeDocumentSettings>
@@ -362,6 +362,19 @@ xmlns="http://www.w3.org/TR/REC-html40">
 	mso-hansi-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
 	mso-bidi-theme-font:minor-bidi;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:blue;
+	mso-themecolor:hyperlink;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:purple;
+	mso-themecolor:followedhyperlink;
+	text-decoration:underline;
+	text-underline:single;}
 span.SpellE
 	{mso-style-name:"";
 	mso-spl-e:yes;}
@@ -426,9 +439,69 @@ div.WordSection1
  </o:shapelayout></xml><![endif]-->
 </head>
 
-<body lang=EN-US style='tab-interval:.5in'>
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
 
 <div class=WordSection1>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><u><span
+style='font-size:14.0pt;line-height:115%;font-family:"Times New Roman","serif"'>#For
+users who want to run the analysis on local computers, please install R package,
+and open R terminal to <span class=SpellE>intall</span> Seurat &amp; <span
+class=SpellE>scran</span> packages<o:p></o:p></span></u></b></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><span
+class=SpellE><span class=GramE><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New"'>install.packages</span></b></span></span><span
+class=GramE><b style='mso-bidi-font-weight:normal'><span style='font-family:
+"Courier New"'>(</span></b></span><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New"'>'Seurat')<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><span
+class=GramE><b style='mso-bidi-font-weight:normal'><span style='font-family:
+"Courier New"'>library(</span></b></span><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New"'>Seurat)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><span
+class=GramE><b style='mso-bidi-font-weight:normal'><span style='font-family:
+"Courier New"'>source(</span></b></span><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New"'>&quot;https://bioconductor.org/<span
+class=SpellE>biocLite.R</span>&quot;)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><span
+class=SpellE><span class=GramE><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New"'>biocLite</span></b></span></span><span
+class=GramE><b style='mso-bidi-font-weight:normal'><span style='font-family:
+"Courier New"'>(</span></b></span><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New"'>“<span class=SpellE>scran</span>”)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><u><span
+style='font-size:14.0pt;line-height:115%;font-family:"Times New Roman","serif"'>#Download
+all demo data from <a href="http://bioinfo5pilm46.mit.edu/software/10XG_demo">http://bioinfo5pilm46.mit.edu/software/10XG_demo</a><o:p></o:p></span></u></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><u><span
+style='font-size:14.0pt;line-height:115%;font-family:"Times New Roman","serif"'>#Create
+a local directory on your computer (</span></u></b><b style='mso-bidi-font-weight:
+normal'><span style='font-size:14.0pt;line-height:115%;font-family:"Times New Roman","serif"'>e.g.,
+<span style='color:#1F497D;mso-themecolor:text2'>C<span class=GramE>:/</span>Users/bioinformatics/Documents/10XG_workshop</span><u>)
+and transfer all demo data to this directory<o:p></o:p></u></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><u><span
+style='font-size:14.0pt;line-height:115%;font-family:"Times New Roman","serif"'><o:p><span
+ style='text-decoration:none'>&nbsp;</span></o:p></span></u></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><u><span
+style='font-size:14.0pt;line-height:115%;font-family:"Times New Roman","serif"'>#<span
+class=GramE>For</span> users who have access to our R-studio Server (Seurat
+&amp; <span class=SpellE>scran</span> packages were pre-installed, and all demo
+files were stored in</span></u></b><b style='mso-bidi-font-weight:normal'><span
+style='font-size:14.0pt;line-height:115%;font-family:"Times New Roman","serif"'>
+<span style='color:#1F497D;mso-themecolor:text2'>~/10XG_demo</span> <u>directory),
+please just open a Chrome or Firefox browser and log in to <a
+href="http://bioinfopilm46.mit.edu:8787">http://bioinfopilm46.mit.edu:8787</a><o:p></o:p></u></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><u><span
+style='font-size:14.0pt;line-height:115%;font-family:"Times New Roman","serif"'><o:p><span
+ style='text-decoration:none'>&nbsp;</span></o:p></span></u></b></p>
 
 <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><u><span
 style='font-size:14.0pt;line-height:115%;font-family:"Times New Roman","serif"'>#Practice1:
@@ -463,19 +536,34 @@ style='font-size:12.0pt;font-family:"Times New Roman","serif"'>#<span
 class=GramE>Set</span> a working directory <o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman","serif"'>#<span
+class=GramE>If</span> you use a local computer, do the following<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><span
 class=SpellE><span class=GramE><b style='mso-bidi-font-weight:normal'><span
 style='font-family:"Courier New"'>setwd</span></b></span></span><span
 class=GramE><b style='mso-bidi-font-weight:normal'><span style='font-family:
 "Courier New"'>(</span></b></span><b style='mso-bidi-font-weight:normal'><span
 style='font-family:"Courier New"'>&quot;C:/Users/bioinformatics/Documents/10XG_workshop/&quot;)<o:p></o:p></span></b></p>
 
+<p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman","serif"'>#<span
+class=GramE>If</span> you use the R-studio server, do the following<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><span
+class=SpellE><span class=GramE><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New"'>setwd</span></b></span></span><span
+class=GramE><b style='mso-bidi-font-weight:normal'><span style='font-family:
+"Courier New"'>(</span></b></span><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New"'>&quot;~/10XG_demo/&quot;)<o:p></o:p></span></b></p>
+
 <p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><b
-style='mso-bidi-font-weight:normal'><span style='font-family:"Courier New"'>#<span
-class=SpellE><span class=GramE>setwd</span></span><span class=GramE>(</span>&quot;~/10XG_demo&quot;)<o:p></o:p></span></b></p>
+style='mso-bidi-font-weight:normal'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
 
 <p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><span
 style='font-size:12.0pt;font-family:"Times New Roman","serif"'>#Load a single
-cell gene expression matrix file<o:p></o:p></span></p>
+cell gene expression matrix file (a non-small cell lung cancer data from 10XG
+pipeline)<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><span
 class=SpellE><span class=GramE><b style='mso-bidi-font-weight:normal'><span
@@ -484,14 +572,24 @@ style='mso-bidi-font-weight:normal'><span style='font-family:"Courier New"'>&lt;
 class=SpellE>read.table</span>(&quot;nsclc_5gex.csv&quot;, header=T, <span
 class=SpellE>row.names</span>=1, <span class=SpellE>sep</span>=&quot;,&quot;)<o:p></o:p></span></b></p>
 
+<p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><b
+style='mso-bidi-font-weight:normal'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman","serif"'>#Output the
+first 3rows×3columns (row names: gene <span class=SpellE>Ensembl</span> ID;
+column names: 10XG cell ID)<o:p></o:p></span></p>
+
 <p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><span
 class=SpellE><span class=GramE><b style='mso-bidi-font-weight:normal'><span
 style='font-family:"Courier New"'>exp</span></b></span></span><span
 class=GramE><b style='mso-bidi-font-weight:normal'><span style='font-family:
 "Courier New"'>[</span></b></span><b style='mso-bidi-font-weight:normal'><span
-style='font-family:"Courier New"'>1:3,1:3]<o:p></o:p></span></b></p>
+style='font-family:"Courier New"'>1:3,1:3] <o:p></o:p></span></b></p>
 
-<p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><o:p>&nbsp;</o:p></p>
+<p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><b
+style='mso-bidi-font-weight:normal'><span style='font-family:"Courier New"'><span
+style='mso-spacerun:yes'>  </span></span></b></p>
 
 <p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><span
 style='font-size:12.0pt;font-family:"Times New Roman","serif"'>#Load a gene <span
@@ -512,7 +610,7 @@ style='font-family:"Courier New"'>genes)<o:p></o:p></span></b></p>
 
 <p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><span
 style='font-size:12.0pt;font-family:"Times New Roman","serif"'>#Pre-process of
-expression matrix file with gene symbol annotation<o:p></o:p></span></p>
+expression matrix file with gene symbol annotation as row names<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><span
 class=SpellE><b style='mso-bidi-font-weight:normal'><span style='font-family:
@@ -578,27 +676,28 @@ package=&quot;<span class=SpellE>scran</span>&quot;))<o:p></o:p></span></b></p>
 
 <p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><o:p>&nbsp;</o:p></p>
 
-<p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><o:p>&nbsp;</o:p></p>
-
-<p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><o:p>&nbsp;</o:p></p>
-
 <p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><span
 style='font-size:12.0pt;font-family:"Times New Roman","serif"'>#Load human
 genome-wide annotation file<o:p></o:p></span></p>
 
-<p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><b
-style='mso-bidi-font-weight:normal'><span style='font-family:"Courier New"'>#<span
-class=GramE>source(</span>&quot;https://bioconductor.org/<span class=SpellE>biocLite.R</span>&quot;)<o:p></o:p></span></b></p>
+<p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><span
+class=GramE><b style='mso-bidi-font-weight:normal'><span style='font-family:
+"Courier New"'>source(</span></b></span><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New"'>&quot;https://bioconductor.org/<span
+class=SpellE>biocLite.R</span>&quot;)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><span
+class=SpellE><span class=GramE><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New"'>biocLite</span></b></span></span><span
+class=GramE><b style='mso-bidi-font-weight:normal'><span style='font-family:
+"Courier New"'>(</span></b></span><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New"'>&quot;<span class=SpellE>org.Hs.eg.db</span>&quot;)<span
+style='mso-spacerun:yes'>  </span>#install human genome-wide annotation<o:p></o:p></span></b></p>
 
 <p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><b
 style='mso-bidi-font-weight:normal'><span style='font-family:"Courier New"'>#<span
 class=SpellE><span class=GramE>biocLite</span></span><span class=GramE>(</span>&quot;<span
-class=SpellE>org.Hs.eg.db</span>&quot;)<o:p></o:p></span></b></p>
-
-<p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><b
-style='mso-bidi-font-weight:normal'><span style='font-family:"Courier New"'>#<span
-class=SpellE><span class=GramE>biocLite</span></span><span class=GramE>(</span>&quot;<span
-class=SpellE>org.Mm.eg.db</span>&quot;)<o:p></o:p></span></b></p>
+class=SpellE>org.Mm.eg.db</span>&quot;) #install mouse genome-wide annotation<o:p></o:p></span></b></p>
 
 <p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><span
 class=GramE><b style='mso-bidi-font-weight:normal'><span style='font-family:
@@ -606,9 +705,13 @@ class=GramE><b style='mso-bidi-font-weight:normal'><span style='font-family:
 style='mso-bidi-font-weight:normal'><span style='font-family:"Courier New"'>org.Hs.eg.db</span></b></span><b
 style='mso-bidi-font-weight:normal'><span style='font-family:"Courier New"'>)<o:p></o:p></span></b></p>
 
-<p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><b
-style='mso-bidi-font-weight:normal'><span style='font-family:"Courier New"'>#<span
+<p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal;tab-stops:
+184.05pt'><b style='mso-bidi-font-weight:normal'><span style='font-family:"Courier New"'>#<span
 class=GramE>library(</span><span class=SpellE>org.Mm.eg.db</span>)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal;tab-stops:
+184.05pt'><b style='mso-bidi-font-weight:normal'><span style='font-family:"Courier New"'><span
+style='mso-tab-count:1'>                           </span><o:p></o:p></span></b></p>
 
 <p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><span
 style='font-size:12.0pt;font-family:"Times New Roman","serif"'>#<span
@@ -707,7 +810,7 @@ style='mso-bidi-font-weight:normal'><span style='font-family:"Courier New"'>)<o:
 
 <p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><span
 style='font-size:12.0pt;font-family:"Times New Roman","serif"'>#<span
-class=GramE>Set</span> a working directory<o:p></o:p></span></p>
+class=GramE>If</span> you use a local computer, do the following<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><span
 class=SpellE><span class=GramE><b style='mso-bidi-font-weight:normal'><span
@@ -715,6 +818,17 @@ style='font-family:"Courier New"'>setwd</span></b></span></span><span
 class=GramE><b style='mso-bidi-font-weight:normal'><span style='font-family:
 "Courier New"'>(</span></b></span><b style='mso-bidi-font-weight:normal'><span
 style='font-family:"Courier New"'>&quot;C:/Users/bioinformatics/Documents/10XG_workshop/&quot;)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman","serif"'>#<span
+class=GramE>If</span> you use the R-studio server, do the following<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><span
+class=SpellE><span class=GramE><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New"'>setwd</span></b></span></span><span
+class=GramE><b style='mso-bidi-font-weight:normal'><span style='font-family:
+"Courier New"'>(</span></b></span><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New"'>&quot;~/10XG_demo/&quot;)<o:p></o:p></span></b></p>
 
 <p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><o:p>&nbsp;</o:p></p>
 
@@ -739,7 +853,8 @@ class=GramE>(</span>&quot;nsclc_5gex_cell_cycle.txt&quot;, header=F)<o:p></o:p><
 
 <p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><span
 style='font-size:12.0pt;font-family:"Times New Roman","serif"'>#Prepare a <span
-class=GramE>meta</span> annotation with cell cycle information integrated<o:p></o:p></span></p>
+class=GramE>meta</span> annotation with cell id and cell cycle phase
+information included for each individual cell<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><span
 class=GramE><b style='mso-bidi-font-weight:normal'><span style='font-family:
@@ -755,9 +870,12 @@ normal'><span style='font-family:"Courier New"'>mymeta</span></b></span><b
 style='mso-bidi-font-weight:normal'><span style='font-family:"Courier New"'>)&lt;-<span
 class=SpellE>colnames</span>(<span class=SpellE>exp</span>)<o:p></o:p></span></b></p>
 
+<p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><b
+style='mso-bidi-font-weight:normal'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
+
 <p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><span
 style='font-size:12.0pt;font-family:"Times New Roman","serif"'>#Create a new
-Seurat object<o:p></o:p></span></p>
+Seurat object, and select genes with non-zero values in at least 5 single cells<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><span
 class=SpellE><span class=GramE><b style='mso-bidi-font-weight:normal'><span
@@ -798,7 +916,7 @@ class=SpellE>display.progress</span> = FALSE)<o:p></o:p></span></b></p>
 
 <p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><span
 style='font-size:12.0pt;font-family:"Times New Roman","serif"'>#Run PCA
-analysis to determine low-dimensions for feature capture<o:p></o:p></span></p>
+analysis to determine the number of low-dimensions for feature capture<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><span
 class=SpellE><span class=GramE><b style='mso-bidi-font-weight:normal'><span
@@ -881,7 +999,7 @@ class=GramE>Identify</span> signature genes for a cell cluster<o:p></o:p></span>
 
 <p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><span
 style='font-size:12.0pt;font-family:"Times New Roman","serif"'>#Tool
-installation<o:p></o:p></span></p>
+installation (only on your local computer)<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><span
 class=GramE><b style='mso-bidi-font-weight:normal'><span style='font-family:
@@ -897,9 +1015,11 @@ class=GramE><b style='mso-bidi-font-weight:normal'><span style='font-family:
 style='font-family:"Courier New"'>&quot;impute&quot;)<o:p></o:p></span></b></p>
 
 <p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><span
-style='font-size:12.0pt;font-family:"Times New Roman","serif"'>#<span
-class=GramE>From</span> local directory, install downloaded <span class=SpellE>combinat</span>
-&amp; <span class=SpellE>MetaDE</span> packages<o:p></o:p></span></p>
+style='font-size:12.0pt;font-family:"Times New Roman","serif"'>#Install the downloaded
+<span class=SpellE>combinat</span> &amp; <span class=SpellE>MetaDE</span>
+packages by clicking “Packages” -&gt; “Install package(s) from local files…”
+-&gt; choosing <b style='mso-bidi-font-weight:normal'>combinat_0.0-8.tar.gz</b>
+or <b style='mso-bidi-font-weight:normal'>MetaDE_1.0.5.tar.gz</b>.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><span
 style='font-size:12.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
@@ -934,7 +1054,8 @@ quote=F, <span class=SpellE>sep</span>=&quot;\t&quot;)<o:p></o:p></span></b></p>
 
 <p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><span
 style='font-size:12.0pt;font-family:"Times New Roman","serif"'>#Visualize
-selected signature genes (CD69, CD3G, CD3D &amp; CD3E)<o:p></o:p></span></p>
+selected signature T-cell marker genes (CD69, CD3G, CD3D &amp; CD3E) to
+identify infiltrating T-cell population<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><span
 class=SpellE><span class=GramE><b style='mso-bidi-font-weight:normal'><span
